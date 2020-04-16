@@ -1,0 +1,11 @@
+Staff001:
+    Username: Romeo
+    Password: Rom001
+    Email: rom@ruby.com
+    Full Name: Romeo Happy
+
+Staff001:
+    Username: Bell
+    Password: Bel001
+    Email: bel@ruby.com
+    Full Name: Bell Fire
