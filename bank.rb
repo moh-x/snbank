@@ -1,42 +1,41 @@
 require_relative "actions.rb"
-
-
-def close_app
-    abort "Thank you for banking with us, Bye!"
-end
-
-def wrong_input
-    print "You have made an invalid input, please try again."
-    puts " Input x to quit banking"
-    i = gets.chomp()
-    return i
-end
-
+customers = []
 
 login = main_menu()
-if main_menu() == 1
-    user = login_check()
-elsif start == 2
-    app_closed()
+
+if login == 1
+    staff = login_check()
 else
-    wrong_input()
-    until wrong_input() == 2
-        main_menu()
-    end
     close_app()
 end
 
-if user = true
+
+if staff == true
     save_session()
+    action = staff_menu()
 else
-
-
-
-until username and password in staff
-    puts = "Invalid username or password, Please try again."
-    username = gets.chomp().to_s
-    password = gets.chomp().to_s
+    puts "We don't know you"
+    close_app()
 end
+
+if action == 1
+    create_bank_accnt()
+    staff_menu()
+elsif action == 2
+    puts "Please type in your correct account number below."
+    acc_num = gets.chomp.to_i
+    check_accnt_details(acc_num)
+    staff_menu()
+else
+    puts "Logging you out!"
+    close_session()
+    what_next = main_menu()
+    if what_next == 2
+        close_app()
+    end
+end
+
+
 
 
 
