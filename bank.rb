@@ -1,52 +1,43 @@
 require_relative "actions.rb"
 
-puts "Welcoome to the SNBank"
-puts "\t1. Staff Login\n\t2.Close App"
-puts "Please select one of the above options."
 
-standard = 99 #A standard first two digit that is unique to our bank
-unique = 0000
+def close_app
+    abort "Thank you for banking with us, Bye!"
+end
 
-start = gets.chomp().to_i
-
-if start == 1
-
-begin
-    
-rescue => exception
-    
-else
-    
+def wrong_input
+    print "You have made an invalid input, please try again."
+    puts " Input x to quit banking"
+    i = gets.chomp()
+    return i
 end
 
 
-def login_check
+login = main_menu()
+if main_menu() == 1
+    user = login_check()
+elsif start == 2
+    app_closed()
+else
+    wrong_input()
+    until wrong_input() == 2
+        main_menu()
+    end
+    close_app()
+end
+
+if user = true
+    save_session()
+else
+
+
+
+until username and password in staff
+    puts = "Invalid username or password, Please try again."
     username = gets.chomp().to_s
     password = gets.chomp().to_s
-    File.foreach("staff.txt") { |line| puts staff }
-    until username and password in staff
-        puts = "Invalid password, Please try again."
-        username = gets.chomp().to_s
-        password = gets.chomp().to_s
-    end
-    File.open((username".txt"), "a") { |f| f.write "#{Time.now} - User logged in\n" }
 end
 
-puts "Choose an action"
-puts "\t1. Create new bank account\n\t2. Check Account Details\n\t3. Logout"
-action = gets.chomp()
 
-#an if statement to confirm action
 
-def create_bank_accnt
-    puts "Please supply the following information correctly."
-    print "Account name: "
-    accnt_name = gets.chomp()
-    print "Opening Balance: "
-    opening_bal = gets.chomp()
-    print "Account Type: "
-    accnt_type = gets.chomp()
-    print "Account email: "
-    accnt_email = gets.chomp()
-    File.foreach("staff.txt") { |line| puts customer }
 
