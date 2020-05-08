@@ -1,0 +1,10 @@
+- Use p to print a value in it's real form; p v is equivalent to print v.inspect.
+- Use eval() to translate a string to ruby code, useful when reading objects from a text file.
+    like:
+hash_str = File.read('my_file.txt')
+my_hash  = eval(hash_str) # Treat a string like Ruby code and evaluate it
+
+# or, as a one-liner
+my_hash  = eval(File.read('my_file.txt'))
+
+- 

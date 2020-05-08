@@ -1,0 +1,18 @@
+[1,2,3,4,5,]
+
+[
+    {   
+        'staff_id'=>"s001",
+        'username'=>"Bell",
+        'password'=>"Bel001",
+        'email'=>"rom@ruby.com",
+        'full Name'=>"Romeo Happy",
+    },
+    {
+        'staff_id'=>"s002",
+        'username'=>"Bell",
+        'password'=>"Bel001",
+        'email'=>"bel@ruby.com",
+        'full Name'=>"Bell Fire",
+    },
+]
